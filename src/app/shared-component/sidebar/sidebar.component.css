@@ -1,0 +1,50 @@
+.sidebar  {
+    color: white;
+    margin: 10px 10px 0 10px;
+    width: 230px;
+}
+
+
+.nav-list {
+    list-style: none;
+    height: 100%;
+    padding: 0%;
+    margin-bottom: 0%;
+}
+
+.nav-list-item {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.nav-list-open .nav-list-item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.nav-list-item mat-icon {
+    font-size: 25px;
+    height: 25px;
+    width: 25px;
+    margin: 0 15px 0 10px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.nav-list-item span {
+    text-transform: capitalize;
+    width: 170px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+}
+button {
+    border: none;
+    background: none;
+    color: white;
+    font-size: 17px;
+}

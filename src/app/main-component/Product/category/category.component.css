@@ -1,0 +1,11 @@
+.section {
+    padding: 50px 100px;
+}
+
+mat-form-field {
+    width: 100% !important;
+}
+.mat-mdc-form-field-error-wrapper {
+    padding: 0px 0px !important;
+}
+

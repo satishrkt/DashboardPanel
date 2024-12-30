@@ -1,0 +1,36 @@
+<div class="login-section">
+    <div class="inner-section row">
+        <div class="left-div col">
+            <img src="assets/images/sd.jpg" alt="Login Page">
+        </div>
+        <div class="right-div col">
+            <form [formGroup]="loginData" (ngSubmit)="login()">
+                <div class="row">
+                    <h1>Welcome To Login</h1>
+                </div>
+                <div class="row my-2">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Username</mat-label>
+                        <mat-icon matSuffix fontIcon="account_circle"></mat-icon>
+                        <input matInput formControlName="username">
+                    </mat-form-field>
+                </div>
+                <div class="row">
+                    <mat-form-field appearance="outline" class="password">
+                        <mat-label>Password</mat-label>                        
+                        <input [type]="hide() ? 'password' : 'text'" matInput class="pass" formControlName="password">
+                        <button type="button" mat-icon-button matSuffix (click)="clickEvent($event)"><mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon></button>
+                    </mat-form-field>
+                </div>
+                <div class="row my-3">
+                    <button class="btn" mat-raised-button color="primary">Login</button>
+                </div>
+
+                <div class="row">
+                    <div class="col"><mat-checkbox>Remember Me</mat-checkbox></div>
+                    <div class="col mt-2 ml-5" style="text-align: end;"><a [routerLink]="['']" routerLinkActive="router-link-active">Forgot Password</a></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

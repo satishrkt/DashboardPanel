@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="section">
+        <form #form="ngForm" (ngSubmit)="addCategory(category)">
+            <div class="row my-3">
+                <div class="col">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Category Name</mat-label>
+                        <input matInput name="name" required placeholder="Product Name" [(ngModel)]="category.name">
+                        <mat-error>Please enter Product Name</mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Description</mat-label>
+                        <textarea matInput required placeholder="Product Description..." name="description" [(ngModel)]="category.description"></textarea>                                               
+                        <mat-error>This field is required</mat-error>
+                    </mat-form-field>
+                    <!-- <ckeditor [editor]="editor" [data]="data"></ckeditor>  -->
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Status</mat-label>
+                        <mat-select name="status" required [(ngModel)]="category.status">
+                            <mat-option value="1">Active</mat-option>
+                            <mat-option value="0">Draft</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>    
+            <div class="row">
+                <div class="col d-flex m-auto">
+                    <button type="submit" mat-raised-button color="primary">{{actionBtn}}</button>
+                    <button type="reset" mat-raised-button color="warn">Close</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <app-tabel [tblColumns]="tableColumns" [tblData]="categoryDataSource"></app-tabel>
+</div>

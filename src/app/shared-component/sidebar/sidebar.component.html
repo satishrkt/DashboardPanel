@@ -1,0 +1,56 @@
+<div class="sidebar">
+    <ul class="nav-list border-white" [ngClass]="{'nav-list-open' : sideNavStatus}">
+        <li class="nav-list-item">
+            <mat-icon class="border-white" aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+            <span><a routerLink="/home" routerLinkActive="active" >Home</a></span>
+        </li>
+        <li class="nav-list-item border-white">
+            <mat-icon class="border-white" aria-hidden="false" class="border-white" aria-label="Example analytics icon" fontIcon="analytics"></mat-icon>
+            <span><a routerLink="product/category" routerLinkActive="active" >Category</a></span>
+        </li>
+        <li class="nav-list-item border-white">
+            <mat-icon class="border-white" aria-hidden="false" aria-label="Example products icon" fontIcon="production_quantity_limits">products</mat-icon>
+            <span><a routerLink="/product" routerLinkActive="active" >Product</a></span>
+        </li>
+        <li class="nav-list-item border-white">
+            <mat-icon class="border-white" aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+            <span><a routerLink="" routerLinkActive="active" >Booking</a></span>
+        </li>
+        <li class="nav-list-item border-white">
+            <mat-icon class="border-white" aria-hidden="false" aria-label="Example calendar icon" fontIcon="calendar_month"></mat-icon>
+            <span><a routerLink="" routerLinkActive="active" >Event</a></span>
+        </li>
+        <li class="nav-list-item border-white">
+            <mat-icon class="border-white" aria-hidden="false" aria-label="Example miscellaneous icon" fontIcon="miscellaneous_services"></mat-icon>
+            <span><a routerLink="" routerLinkActive="active" >Services</a></span>
+        </li>
+        <li class="nav-list-item border-white">
+            <mat-icon class="border-white" aria-hidden="false" aria-label="Example mail icon" fontIcon="mail"></mat-icon>
+            <span><a routerLink="" routerLinkActive="active" >Mail</a></span>
+        </li>
+        <li class="nav-list-item border-white">
+            <mat-icon class="border-white" aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+            <span><a routerLink="" routerLinkActive="active" >Result</a></span>
+        </li>
+        <li class="nav-list-item border-white">
+            <mat-icon class="border-white" aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+            <span><a routerLink="" routerLinkActive="active" >Result</a></span>
+        </li>
+        <li class="nav-list-item border-white">
+            <mat-icon class="border-white" aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+            <span><a routerLink="" routerLinkActive="active" >Result</a></span>
+        </li>
+        <li class="nav-list-item border-white">
+            <mat-icon class="border-white" aria-hidden="false" aria-label="Example results icon" fontIcon="account_balance"></mat-icon>
+            <span><a routerLink="" routerLinkActive="active">Result</a></span>
+        </li>
+        <li class="nav-list-item border-white">
+            <mat-icon class="border-white" aria-hidden="false" aria-label="Example settings icon" fontIcon="settings"></mat-icon>
+            <span><a routerLink="" routerLinkActive="active">Setting</a></span>
+        </li>
+        <li class="nav-list-item border-white">
+            <mat-icon class="border-white" aria-hidden="false" aria-label="Example logout icon" fontIcon="logout"></mat-icon>
+            <span><button (click)="logout()">Logout</button></span>
+        </li>
+    </ul>
+</div>

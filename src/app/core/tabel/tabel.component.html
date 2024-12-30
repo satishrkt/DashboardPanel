@@ -1,0 +1,40 @@
+<div class="card">
+    <div class="card-header">Product List</div>
+    <div class="card-body">
+        <mat-form-field appearance="outline">
+            <mat-label>Filter</mat-label>
+            <input matInput (keyup)="filterData($event)" placeholder="Search..." #input>
+        </mat-form-field>
+        <table mat-table [dataSource]="tblData" class="mat-elevation-z8">  
+            @for (column of displayColumns; track column) {
+                <ng-container [matColumnDef]="column">
+                    @if(column !== 'action') {                        
+                            <th mat-header-cell *matHeaderCellDef>{{ column | uppercase }}</th>
+                            <td mat-cell *matCellDef="let data">{{ data[column] }}</td>
+                    } @else {
+                        <th mat-header-cell *matHeaderCellDef>{{ column | uppercase }}</th>
+                        <td mat-cell *matCellDef="let data">
+                            {{data[column]}}
+                            <button mat-icon-button color="primary" (click)="onClickEdit(data)">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button color="warn" (click)="onClickDelete(data.productId)">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </td>
+                    }
+                </ng-container>
+            } @empty { 
+                <p>Data not found</p>
+            }
+            <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayColumns;"></tr>
+    
+            <tr class="mat-row" *matNoDataRow>
+                <td class="mat-sell" colspan="4">No data matching the filter {{ input.value }}</td>
+            </tr>            
+        </table>
+        <mat-paginator pageSizeOption="[5, 10, 20, 30]"></mat-paginator>
+    </div>
+</div>
+  

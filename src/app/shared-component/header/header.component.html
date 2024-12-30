@@ -1,0 +1,17 @@
+<header class="navbar bg-body-tertiary fixed-top">
+    <div class="container-fluid" >
+        <div class="nav-area">
+            <button (click)="sideNavToggle()" mat-mini-fab color="white"  aria-label="Example icon button with a menu icon">
+                <mat-icon >menu</mat-icon>
+            </button>
+            <img class="ms-3" src="assets/images/amazon-logo.webp" alt="logo">
+            <h2 class="" style="margin: 0 !important;">Dashboard</h2>           
+        </div>
+        <div class="nav-area">
+            <!-- <div matBadge="4" matBadgeOverlap="false" class="demo-section"> -->
+                <mat-icon aria-hidden="false" aria-label="Example account icon" fontIcon="account_circle"></mat-icon>
+            <!-- </div> -->
+            <h2 class="" style="margin: 0 15px !important;">{{username}}</h2>
+        </div>
+    </div>
+</header>
